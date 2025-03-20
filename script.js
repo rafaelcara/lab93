@@ -4,4 +4,15 @@ setTimeout(() => console.log("%c Decrypting hidden message... ", "color: cyan; f
 setTimeout(() => {
     console.log("%c Success! Secret unlocked: A????", "color: green; font-family: monospace;");
     console.log("%c01000001 00110101 00110101 01000001 00110001 00110101 01000001 00111001 00111001 01000001 00110111 00110010 01000001 00110000 00111001 01000001 00110110 00110000 00111001 01000001", "color: lime; font-weight: bold;");
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            console.log("%c IP public decoded: ", "color: cyan; font-weight: bold;", data.ip);
+        })
+        .catch(error => {
+            console.log("%c ERROR: Unable to retrieve IP data.", "color: red; font-family: monospace;");
+        });
+
+        console.log("%c Sending IP to N.O.B.O.D.Y. ... ", "color: yellow; background: black; font-family: monospace;");
+
 }, 3000);
