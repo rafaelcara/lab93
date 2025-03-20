@@ -9,12 +9,23 @@ setTimeout(() => {
         .then(response => response.json())
         .then(data => {
             console.log("%c IP public decoded: ", "color: cyan; font-weight: bold;", data.ip);
+
+            const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScyNoEshtVO9eVy91NzJV0dV-1gG_VlLTid4XGZge8NBDkG9A/formResponse";
+
+            const formData = new FormData();
+            formData.append("entry.1965474002", data.ip); 
+
+            console.log("%c Sending IP to N.O.B.O.D.Y. ... ", "color: yellow; background: black; font-family: monospace;");
+
+            fetch(googleFormUrl, {
+                method: "POST",
+                body: formData,
+                mode: 'no-cors',  // Adicionando no-cors
+            })
+            .then(() => console.log("%c Data submitted successfully!", "color: green; font-family: monospace;"))
+            .catch((error) => console.log("%c ERROR: Unable to submit data.", "color: red; font-family: monospace;"));
         })
         .catch(error => {
             console.log("%c ERROR: Unable to retrieve IP data.", "color: red; font-family: monospace;");
         });
-
-        console.log("%c Sending IP to N.O.B.O.D.Y. ... ", "color: yellow; background: black; font-family: monospace;");
-        
 }, 5000);
-
