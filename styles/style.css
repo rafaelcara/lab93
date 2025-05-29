@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --cor-primaria: #414767;
+  --cor-secundaria: #D1AB5F;
+  --cor-tercearia: #6e7598;
+  --cor-quarternaria: #64d86b;
+  --fonte-principal: "Work Sans";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-primaria);
+  font-family: var(--fonte-principal), sans-serif;
+  color: var(--cor-secundaria);
+}
+
+.geral {
+  display: flex;
+}
+
+.geral__menu {
+  margin: 1rem 0.5rem 1rem 1rem;
+  border: 1px solid var(--cor-tercearia);
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.geral__menu__parte_1 {
+  background-color: #071B31;
+  box-sizing: border-box;
+  height: 25%;
+  border-bottom: 1px solid var(--cor-tercearia);
+  width: 100%;
+}
+
+.geral__menu__parte_1__logo {
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center;
+}
+
+.geral__menu__parte_2 {
+  box-sizing: border-box;
+  height: 45%;
+  border-bottom: 1px solid var(--cor-tercearia);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.geral__menu__parte_2__link {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.geral__menu__parte_3 {
+  box-sizing: border-box;
+  height: 45%;
+  border-bottom: 1px solid var(--cor-tercearia);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.geral__principal {
+  margin: 1rem 1rem 1rem 0.5rem;
+  border: 1px solid var(--cor-tercearia);
+  width: 75%;
+  height: 100vh;
+  color: var(--cor-secundaria);
+}
+
+.geral__principal__titulo {
+  padding: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.geral__principal__conteudo {
+  padding: 3rem;
+  font-size: 2rem;
+  text-align: justify;
+}
